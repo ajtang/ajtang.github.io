@@ -52,6 +52,7 @@
 .col-xs-4,
 .col-sm-4,
 .col-md-4,
+.col-md-4-5,
 .col-lg-4,
 .col-xs-5,
 .col-sm-5,
@@ -68,6 +69,7 @@
 .col-xs-8,
 .col-sm-8,
 .col-md-8,
+.col-md-8-5,
 .col-lg-8,
 .col-xs-9,
 .col-sm-9,
@@ -485,10 +487,12 @@
     .col-md-2,
     .col-md-3,
     .col-md-4,
+    .col-md-4-5,
     .col-md-5,
     .col-md-6,
     .col-md-7,
     .col-md-8,
+    .col-md-8-5,
     .col-md-9,
     .col-md-10,
     .col-md-11,
@@ -510,7 +514,7 @@
     .col-md-8 {
         width: 66.66666667%
     }
-	.col-md-8.5 {
+	  .col-md-8-5 {
         width: 80%
     }
     .col-md-7 {
@@ -522,15 +526,15 @@
     .col-md-5 {
         width: 41.66666667%
     }
-	.col-md-88 {
+	  .col-md-88 {
 		float: right;
         width: 41.66666667%
     }
     .col-md-4 {
         width: 33.33333333%
     }
-	.col-md-4.5 {
-        width: 30%
+	  .col-md-4-5 {
+        width: 20%
     }
     .col-md-3 {
         width: 25%
