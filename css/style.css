@@ -286,7 +286,7 @@ blockquote p {
     height: auto;
 }
 .respimg2 {
-    width: 267px;
+    width: 100%;
     height: auto;
 }
 
@@ -2133,6 +2133,9 @@ section.parallax-section.parallax-sec-half-left .overlay {
     top: 0;
     white-space: nowrap;
 }
+.topdown {
+	top: 80px;
+}
 
 section.parallax-section.parallax-sec-half-left .horizonral-subtitle {
     left: inherit;
@@ -2157,7 +2160,7 @@ section.parallax-section.parallax-sec-half-left .horizonral-subtitle span {
     font-weight: 800;
     color: rgb(50, 58, 69);
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 section.parallax-section.parallax-sec-half-left .section-title {
@@ -4167,7 +4170,7 @@ section.parallax-section .section-title:before {
     position: relative;
     text-align: left;
     padding-bottom: 20px;
-	top: -150px;
+	top: -100px;
 }
 
 .fet_pr-carousel-title-item p {
@@ -7736,7 +7739,7 @@ section.parallax-section .section-title:before {
         padding-left: 30px;
     }
     .section-title h2 {
-        font-size: 26px;
+        font-size: 40px;
     }
     .custom-form button {
         margin-top: 30px;
