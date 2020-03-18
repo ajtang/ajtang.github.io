@@ -14,9 +14,39 @@
     <link type="text/css" rel="stylesheet" href="css/plugins.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/color.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
+	  <link rel="stylesheet" href="css/magnific-popup.css">
     <!--=============== favicons ===============-->
     <link rel="shortcut icon" href="images/favicon.ico">
+    <!--=============== scripts  ===============-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('.popupgallery').magnificPopup({
+      type: 'image',
+      delegate: 'a',
+      closeOnContentClick: true,
+      image: {
+          verticalFit: true
+          }
+      });
+
+    });
+    </script>
+    <script  type="text/javascript">
+    $(document).ready(function() {
+        $('.iframe-popup').magnificPopup({
+            type: 'iframe',
+        delegate: 'a',
+          closeOnContentClick: true,
+          image: {
+              verticalFit: true
+        });
+    });
+    </script>
 </head>
 
 <body>
@@ -65,16 +95,11 @@
             <div class="nav-inner-wrap">
                 <nav class="nav-inner sound-nav" id="menu">
                     <ul>
-                        <li>
-                            <a href="#sec1">Home</a>
-
-                        <li>
-                            <a  href="#sec2">About</a>
-                            <!--level 2 -->                            <!--level 2 end -->
-                        </li>
-                        <li><a href="#sec3">Resume</a></li>
-                        <li><a href="#sec4">Skills</a></li>
-                        <li><a href="#sec5">Projects</a></li>
+                        <li><a href="#sec1" id="foo" >Home</a></li>
+                        <li><a href="#sec2" id="foo2" >About</a></li>
+                        <li><a href="#sec3" id="foo3">Resume</a></li>
+                        <li><a href="#sec4" id="foo4">Skills</a></li>
+                        <li><a href="#sec5" id="foo5">Projects</a></li>
                     </ul>
                 </nav>
             </div>
@@ -1148,36 +1173,7 @@
         <!-- share-wrapper end -->
     </div>
     <!-- Main end -->
-    <!--=============== scripts  ===============-->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function() {
 
-		$('.popupgallery').magnificPopup({
-		    type: 'image',
-		    delegate: 'a',
-		    closeOnContentClick: true,
-		    image: {
-		        verticalFit: true
-		    }
-		});
-
-	});
-	</script>
-	<script  type="text/javascript">
-	$(document).ready(function() {
-	    $('.iframe-popup').magnificPopup({
-	        type: 'iframe',
-			delegate: 'a',
-		    closeOnContentClick: true,
-		    image: {
-		        verticalFit: true
-	    });
-	});
-	</script>
 </body>
 
 </html>
