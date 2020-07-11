@@ -131,7 +131,11 @@ display: inline-block;
 
 }
 .search-wrapper.active {}
-
+@media only screen and (max-width: 600px) {
+	.search-wrapper.active {
+		width: 40%;
+	}
+}
 .search-wrapper .input-casing {    
     height: 45px;
     width:70px;
