@@ -186,7 +186,7 @@ $(document).click(function(e){
 	}
 });
 var $input = document.getElementById('movie-search');
-var baseUrl = "http://sg.media-imdb.com/suggests/";
+var baseUrl = "https://sg.media-imdb.com/suggests/";
 var $result = document.getElementById('result');
 var body = document.getElementsByTagName('body');
 
@@ -239,9 +239,9 @@ function tellMe(){
 		    		var destinationUrl;
 
 		    		if(category === "tt") {
-		    			destinationUrl = "http://www.imdb.com/title/" + result.d[i].id;
+		    			destinationUrl = "https://www.imdb.com/title/" + result.d[i].id;
 		    		} else {
-		    			destinationUrl = "http://www.imdb.com/name/" + result.d[i].id;
+		    			destinationUrl = "https://www.imdb.com/name/" + result.d[i].id;
 		    		}
 		    		window.imid = result.d[i].id;
 		    		resultRow.setAttribute('id', 'linkTo');
