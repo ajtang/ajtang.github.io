@@ -1,11 +1,23 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+#allows a single uri through the .htaccess password protection
+SetEnvIf Request_URI "/excluse$" test_uri
 
-AuthUserFile .htpasswd
+#allows everything if its on a certain host
+SetEnvIf HOST "^nowthisisart.ca" testing_url
+SetEnvIf HOST "^nowthisisart.ca" live_url
+Order Deny,Allow
+
+AuthName "Restricted Area"
 AuthType Basic
-AuthName "My Secret Page"
+AuthUserFile .htpasswd
+AuthGroupFile /
+Require valid-user
 
-<Files "excluse.html">
-  Require valid-user
-</Files>
+#Allow valid-user
+Deny from all
+Allow from env=test_uri
+Allow from env=testing_url
+Allow from env=live_url
+Satisfy any
