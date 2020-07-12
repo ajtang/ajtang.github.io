@@ -1,4 +1,4 @@
-AuthUserFile https://www.nowthisisart.ca/exclusive/.htpasswd
+AuthUserFile top/www.nowthisisart.ca/exclusive/.htpasswd
 AuthName "Restricted"
 AuthType Basic
 require valid-user
