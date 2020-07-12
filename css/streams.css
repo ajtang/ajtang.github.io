@@ -111,8 +111,9 @@ textarea {
   background-color: #fff;
   opacity: 0;
   border-radius: 20px;
-  -webkit-box-shadow: 0 0 10px -10px #000000;
-  box-shadow: 0 0 10px -10px #000000;
+  -webkit-box-shadow: 0 0 50px -10px #000000;
+  box-shadow: 0 0 50px -10px #000000;
+  z-index: 10000;
 }
 
 #close-modal {
