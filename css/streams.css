@@ -99,6 +99,61 @@ textarea {
 
 
 
+.play-container {
+  width: 100%;
+  text-align: right;
+  margin-top: -47px;
+  margin-left: -25px;
+}
+
+.play-circle {
+  stroke: #f8aa28;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+.playBut {
+  /*  border: 1px solid red;*/
+  display: block;
+  
+  -webkit-transition: all 0.5s ease;
+}
+.playBut .play-triangle {
+  -webkit-transition: all 0.7s ease-in-out;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: #fff;
+  transform: translateY(0);
+}
+.playBut:hover .play-triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #f8aa28;
+  animation: nudge 0.7s ease-in-out;
+}
+@keyframes nudge {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.playBut:hover .play-circle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
 
 
 body {
