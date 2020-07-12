@@ -333,7 +333,6 @@ display: inline-block;
     transform: translate(0, 60px);
     transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
     transition-delay: 0.3s;
-	  text-transform: uppercase;
 }
 .search-wrapper.active .input-casing .search-input {
     opacity: 1;
