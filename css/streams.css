@@ -97,17 +97,123 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*assword container*/
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
 
+#sign-up-modal {
+  position: fixed;
+  width: 350px;
+  height: 200px;
+  top: 100%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -175px;
+  background-color: #fff;
+  opacity: 0;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px -10px #000000;
+  box-shadow: 0 0 10px -10px #000000;
+}
+
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 26px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #cfa3b1;
+}
+
+#sign-up-modal h2 {
+  font-family: Nunito, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
+  color: #04080F;
+  padding-top: 36px;
+}
+
+#sign-up-modal img {
+  display: block;
+  margin: auto;
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+#sign-up-modal input {
+  width: 280px;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cfa3b1;
+  font-size: 16px;
+  font-family: Nunito, sans-serif;
+  font-weight: 300;
+}
+
+#sign-up-modal #submit {
+  background-color: #c38d9e;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: Nunito, sans-serif;
+  font-size: 18px;
+  margin: auto;
+  margin-top: 15px;
+  display: block;
+  padding: 12px 120px;
+  cursor: pointer;
+}
+
+#sign-up-modal #submit:hover {
+  background-color: #e1c6ce;
+}
+
+.animationIn {
+  animation: modalIn 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+    top: 200%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+.animationOut {
+  animation: modalOut 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes modalOut {
+  100% {
+    opacity: 0;
+    top: 200%;
+  }
+  0% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+/*Play button*/
 
 .play-container {
   width: 100%;
   text-align: right;
   margin-top: -47px;
   margin-left: -25px;
+  cursor: pointer;
 }
 
 .play-circle {
-  stroke: #f8aa28;
+  stroke: #cfb38b;
   stroke-dasharray: 650;
   stroke-dashoffset: 650;
   -webkit-transition: all 0.5s ease-in-out;
@@ -130,7 +236,7 @@ textarea {
 .playBut:hover .play-triangle {
   stroke-dashoffset: 0;
   opacity: 1;
-  stroke: #f8aa28;
+  stroke: #cfb38b;
   animation: nudge 0.7s ease-in-out;
 }
 @keyframes nudge {

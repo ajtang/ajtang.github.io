@@ -39,7 +39,7 @@
     <!-- Add your site or application content here -->
 		<section class="section section--valo">
 		<div class='play-container'>
-				  <a href='exclusive/streameasy'class='playBut'>
+				  <a class='playBut' id='enter'>
 				    
 				<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
 				<svg version="1.1"
@@ -56,6 +56,15 @@
 				
 				    
 				  </a>
+				</div>
+				<div id="sign-up-modal" class="">
+				  <a id="close-modal">&times;<a>
+				
+				  <form>
+				    <input style = "outline: none" name="password "type="password" id="password" placeholder="password" required="true" />
+				    <a style = "outline: none" type='button' id="submit">Enter</a>
+					<p id="wrongPassword" style="display: none">wrong password</p>
+				    </form>
 				</div>
 
 		<div class="search-wrapper active">
@@ -85,7 +94,7 @@
 	<br>
 
 	<br>
-
+	<script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 	<script src="js/vendor/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src='js/stream.js'></script>

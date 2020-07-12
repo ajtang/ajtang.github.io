@@ -1,7 +1,0 @@
-AuthUserFile top/www.nowthisisart.ca/exclusive/.htpasswd
-AuthName "Restricted"
-AuthType Basic
-require valid-user
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]

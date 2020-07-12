@@ -7,6 +7,17 @@ const url = `https://www.omdbapi.com/?apikey=${key}&t=`;
 const urli = `https://www.omdbapi.com/?apikey=${key}&i=`;
 var filesadded=""
 // set the type attribute
+$('#enter').on('click', function() {
+  $('#sign-up-modal').addClass('animationIn');
+  $('#sign-up-modal').removeClass('animationOut');
+   $('#password').focus();
+});
+
+$('#close-modal').on('click', function() {
+  $('#sign-up-modal').removeClass('animationIn');
+  $('#sign-up-modal').addClass('animationOut');
+});
+
 function addMovie(title,year,type) {
 	console.log("test");
 	var cat = "movie";
@@ -172,7 +183,42 @@ function stopMe(obj, evt){
 
 }
 // js only creates and insert parts + click events adds classes
+	function loadPage(pwd) {
 
+		var hash= pwd;
+		hash= Sha1.hash(pwd);
+		var url= hash + "/streameasy";
+
+		$.ajax({
+			url : url,
+			dataType : "html",
+			success : function(data) {
+
+				window.location= url;
+
+			},
+			error : function(xhr, ajaxOptions, thrownError) {
+
+
+				//parent.location.hash= hash;
+
+				$("#wrongPassword").show();
+				//$("#password").attr("placeholder","wrong password");
+				$("#password").val("");
+			}
+		});
+	}
+
+
+	$("#submit").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
+
+			loadPage($("#password").val());
+		}
+	});
 $(document).click(function(e){
 
     // Check if click was triggered on or within #menu_content
