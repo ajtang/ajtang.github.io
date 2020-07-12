@@ -1,10 +1,21 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+# Do the regex check against the URI here, if match, set the "require_auth" var
+SetEnvIf Request_URI ^/excluse require_auth=true
+
+# Auth stuff
+AuthUserFile .htpasswd
+AuthName "Password Protected"
 AuthType Basic
-AuthName "Password Protection"
-AuthBasicProvider file
-AuthUserFile /.htpasswd
-<FilesMatch “[excluse.html]”>
+
+# Setup a deny/allow
+Order Deny,Allow
+# Deny from everyone
+Deny from all
+# except if either of these are satisfied
+Satisfy any
+# 1. a valid authenticated user
 Require valid-user
-</FilesMatch>
+# or 2. the "require_auth" var is NOT set
+Allow from env=!require_auth
