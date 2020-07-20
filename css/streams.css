@@ -214,7 +214,7 @@ textarea {
 }
 
 .play-circle {
-  stroke: #cfb38b;
+  stroke: #CB8A4A;
   stroke-dasharray: 650;
   stroke-dashoffset: 650;
   -webkit-transition: all 0.5s ease-in-out;
@@ -236,8 +236,8 @@ textarea {
 }
 .playBut:hover .play-triangle {
   stroke-dashoffset: 0;
-  opacity: 1;
-  stroke: #cfb38b;
+  opacity: .3;
+  stroke: #CB8A4A;
   animation: nudge 0.7s ease-in-out;
 }
 @keyframes nudge {
@@ -259,12 +259,12 @@ textarea {
 }
 .playBut:hover .play-circle {
   stroke-dashoffset: 0;
-  opacity: 1;
+  opacity: .3;
 }
 
 
 body {
-   background: #91D5D4;
+   background: #f4f1e9;
 }
 
 ::selection {
@@ -272,9 +272,9 @@ body {
 }
 .logo {
 	position: absolute;
-	bottom:  65px;
+	bottom:  40px;
 	margin: auto;
-	left: 71px;
+	left: 43px;
 	
 }
 .streams {
@@ -293,17 +293,13 @@ display: inline-block;
 
 }
 .search-wrapper.active {}
-@media only screen and (max-width: 600px) {
-	.search-wrapper.active {
-		width: 40%;
-	}
-}
 .search-wrapper .input-casing {    
     height: 45px;
     width:70px;
     overflow: hidden;
     background: rgba(255,255,255,0);
     border-radius:6px;
+	top: 12px;
     position: relative;
     transition: all 0.3s ease-in-out;
 }
@@ -313,6 +309,26 @@ display: inline-block;
     background: rgba(0,0,0,0.3);
     transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
 }
+@media only screen and (max-width: 600px) {
+	.search-wrapper.active .input-casing {
+		transform: scale(.8);
+		
+	}
+}
+@media only screen and (max-width: 600px) {
+	.search-wrapper.active .close {
+		transform: scale(.8);
+		left: 380px;
+		
+	}
+}
+@media only screen and (max-width: 600px) {
+	.search-wrapper.active .input-casing .search-icon{
+		size
+		
+	}
+}
+
 .search-wrapper .input-casing .search-input {
     width:100%;
     height: 25px;
@@ -393,9 +409,9 @@ display: inline-block;
 .search-wrapper .close {
     position: absolute;
     z-index: 1;
-    top:10px;
-    right:20px;
-    width:32px;
+    top:21px;
+    right:2px;
+	width: 30px;
     height:40px;
     cursor: pointer;
     transform: rotate(-180deg);
@@ -432,14 +448,18 @@ display: inline-block;
 
 	
 @media only screen and (max-width: 600px) {
-	.section--valo {
-		width: 113%;
+	.section {
+		width: 125%;
+		display: align-content;
+		text-align: center;
 	}
 }
+
 .section {
   text-align: center;
+  display: block;
   height: 100%;
-  margin: 0 auto;
+  margin: auto;
   padding: 5em 0; }
   .section__title {
     font-size: 1.1em;
@@ -448,7 +468,7 @@ display: inline-block;
     color: #fff;
     margin-bottom: 3em; }
   .section--valo {
-    background: #E27D60; }
+    background: #acb7ae; }
 .toggle-button-all {
   position: relative;
   display: inline-block;
@@ -2287,7 +2307,7 @@ vertical-align: middle;
 }
 
 .resultRow:hover {
-	background-color: #FBFBDF;
+	background-color: #f2e0c3;
 }
 
 .poster {
