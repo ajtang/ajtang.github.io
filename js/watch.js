@@ -37,7 +37,7 @@ function movieDataTpl(movie){
     </div>
   `;
   $html2 = `	
-  <script async src='..js/yo.js'></script>
+  <script async src='../js/yo.js'></script>
   <div id="yohoho" data-player="videospider" data-imdb=${movie.imdbID}></div>
   <a class="close" href="#">&times;</a>`; 
   $("#movie-data").html($html);
